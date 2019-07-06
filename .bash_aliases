@@ -8,3 +8,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# MPD
+alias mpd='(cd ~/.scripts/ && ./mpd_regular.sh)'
+alias mpd_bit_perfect='(cd ~/.scripts/ && ./mpd_bit_perfect.sh)'
