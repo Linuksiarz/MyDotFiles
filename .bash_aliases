@@ -15,3 +15,8 @@ alias egrep='egrep --color=auto'
 # MPD
 alias mpd='(cd ~/.scripts/ && ./mpd_regular.sh)'
 alias mpd_bit_perfect='(cd ~/.scripts/ && ./mpd_bit_perfect.sh)'
+
+# Bose
+alias bose-0="based-connect -c off 04:52:C7:32:6E:0E"
+alias bose-1="based-connect -c low 04:52:C7:32:6E:0E"
+alias bose-2="based-connect -c high 04:52:C7:32:6E:0E"
