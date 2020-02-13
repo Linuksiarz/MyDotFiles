@@ -4,6 +4,7 @@ alias docker="sudo /usr/bin/docker"
 alias current_audio="cat /proc/asound/card*/pcm*p/sub*/hw_params"
 alias cfg='/usr/bin/git --git-dir=/home/linuksiarz/.cfg/ --work-tree=/home/linuksiarz'
 alias vv='nvim'
+alias vv_conf='vv ~/.config/nvim/init.vim'
 
 # Colours
 alias ls='ls --color=auto'
