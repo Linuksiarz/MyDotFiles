@@ -4,9 +4,9 @@
         "layer": "top",
         "position": "top",
         "height": 26,
-        "modules-left": ["battery#bat1", "battery#bat2", "disk", "memory", "cpu", "temperature", "bluetooth", "pulseaudio", "backlight", "idle_inhibitor"],
+        "modules-left": ["battery#bat1", "battery#bat2", "disk", "memory", "cpu", "temperature", "bluetooth", "backlight", "idle_inhibitor"],
         "modules-center": ["sway/window"],
-        "modules-right": ["network#vpn", "network#wifi", "network#ethernet", "network#disconnected", "custom/mail", "custom/weather", "clock", "custom/poweroff"],
+        "modules-right": ["network#vpn", "network#wifi", "network#ethernet", "network#disconnected", "custom/mail", "custom/weather", "pulseaudio", "clock", "custom/poweroff"],
         "sway/window": {
             "format": "{}  ",
             "on-click": "swaymsg kill"
@@ -125,24 +125,7 @@
             "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
             "on-click": "nm-connection-editor"
         },
-        "pulseaudio": {
-            "scroll-step": 1,
-            "format": "{icon} {volume}%{format_source}",
-            "format-bluetooth": "{icon} {volume}%{format_source}",
-            "format-bluetooth-muted": " {icon}{format_source}",
-            "format-muted": " {format_source}",
-            "format-source": "  {volume}%",
-            "format-source-muted": " ",
-            "format-icons": {
-                "headphone": "",
-                "phone": "",
-                "portable": "",
-                "car": "",
-                "default": ["", "", ""]
-            },
-            "on-click": "pavucontrol"
-        },
-        "custom/weather": {
+       "custom/weather": {
             "return-type": "json",
             "exec": "bash $HOME/.config/waybar/scripts/weather.sh",
             "interval": 300,
@@ -158,6 +141,23 @@
             "exec": "sh $HOME/.config/waybar/scripts/mail.sh",
             "interval": 120,
             "on-click": "thunderbird && swaymsg '[app_id=thunderbird] focus'"
+        },
+	"pulseaudio": {
+            "scroll-step": 1,
+            "format": "{icon} {volume}%{format_source}",
+            "format-bluetooth": "{icon} {volume}%{format_source}",
+            "format-bluetooth-muted": " {icon}{format_source}",
+            "format-muted": " {format_source}",
+            "format-source": "  {volume}%",
+            "format-source-muted": " ",
+            "format-icons": {
+                "headphone": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pavucontrol"
         }
     },
     {
@@ -182,5 +182,5 @@
         "sway/mode": {
             "format": "<span style=\"italic\">{}</span>"
         }
-    }
+   }
 ]

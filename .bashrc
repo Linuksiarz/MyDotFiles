@@ -1,4 +1,4 @@
-if [ -f ~/.bash_aliases ]; then
+if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
