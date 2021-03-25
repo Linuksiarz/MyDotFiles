@@ -1,13 +1,13 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "DejaVu Sans Condensed", "FontAwesome 5 Free Solid";
-    font-size: 13px;
+    font-family: "Ubuntu Mono", "DejaVu Sans Condensed", "FontAwesome 5 Free Solid";
+    font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 1);
+    background-color: rgba(43, 48, 59, 0.9);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;

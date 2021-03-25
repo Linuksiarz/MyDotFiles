@@ -3,15 +3,18 @@
         "name": "topbar",
         "layer": "top",
         "position": "top",
-        "height": 26,
-        "modules-left": ["battery#bat1", "battery#bat2", "disk", "memory", "cpu", "temperature", "bluetooth", "backlight", "idle_inhibitor"],
-        "modules-center": ["sway/window"],
-        "modules-right": ["network#vpn", "network#wifi", "network#ethernet", "network#disconnected", "custom/mail", "custom/weather", "pulseaudio", "clock", "custom/poweroff"],
+        "height": 28,
+        "modules-left": ["sway/mode", "sway/workspaces", "sway/window"],
+        "modules-center": [],
+        "modules-right": ["battery#bat1", "battery#bat2", "disk", "memory", "cpu", "temperature", "bluetooth", "backlight", "idle_inhibitor", "network#vpn", "network#wifi", "network#ethernet", "network#disconnected", "custom/mail", "custom/weather", "pulseaudio", "clock", "custom/poweroff"],
         "sway/window": {
-            "format": "{}  ",
+            "format": "  {}  ❌",
             "on-click": "swaymsg kill"
         },
-	 "bluetooth": {
+	"sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+        "bluetooth": {
   	    "format": "{icon}",
   	    "format-alt": "bluetooth: {status}",
   	    "interval": 30,
@@ -32,7 +35,7 @@
             "interval": 1,
             "format": "<b>{:%H:%M:%S}</b>",
             "format-alt": "{:%Y-%m-%d}",
-            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
         },
         "cpu": {
             "format": " {usage}%",
@@ -133,7 +136,7 @@
         },
         "custom/poweroff": {
             "tooltip": false,
-            "format": "⏻",
+            "format": "⏻ ",
             "on-click": "bash $HOME/.config/waybar/scripts/poweroff.sh"
         },
         "custom/mail": {
@@ -155,7 +158,7 @@
                 "phone": "",
                 "portable": "",
                 "car": "",
-                "default": ["", "", ""]
+                "default": ["🔈", "🔉", ""]
             },
             "on-click": "pavucontrol"
         }
@@ -164,14 +167,10 @@
         "name": "bottombar",
         "layer": "top",
         "position": "bottom",
-        "height": 26,
+        "height": 28,
         "modules-left": ["tray"],
         "modules-center": ["wlr/taskbar"],
-        "modules-right": ["sway/workspaces", "sway/mode"],
-        "tray": {
-            "icon-size": 24,
-            "spacing": 10
-        },
+        "modules-right": [],
         "wlr/taskbar": {
             "format": "{icon} {app_id}",
             "icon-size": 24,
@@ -179,8 +178,9 @@
             "on-click": "activate",
             "on-click-right": "close"
         },
-        "sway/mode": {
-            "format": "<span style=\"italic\">{}</span>"
+        "tray": {
+            "icon-size": 24,
+            "spacing": 10
         }
-   }
+  }
 ]
