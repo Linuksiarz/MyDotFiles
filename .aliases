@@ -29,3 +29,4 @@ alias pogoda="curl wttr.in"
 # Sway
 alias sw="exec ~/.scripts/start_sway.sh"
 alias swsu="sudo env XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR"
+alias ssh="kitty +kitten ssh"
