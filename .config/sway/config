@@ -15,6 +15,8 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Enable numlock
 input * xkb_numlock enable
 
+input "type:keyboard" xkb_options caps:swapescape
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -31,7 +33,7 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu bemenu-run | xargs swaymsg exec --
-set $menu wofi -S drun | xargs swaymsg exec --
+set $menu wofi -S drun | xargs something exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
