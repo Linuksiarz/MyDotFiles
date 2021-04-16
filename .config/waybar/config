@@ -5,8 +5,8 @@
         "position": "top",
         "height": 28,
         "modules-left": ["sway/mode", "sway/workspaces", "sway/window"],
-        "modules-center": [],
-        "modules-right": ["battery#bat1", "battery#bat2", "disk", "memory", "cpu", "temperature", "bluetooth", "backlight", "idle_inhibitor", "network#vpn", "network#wifi", "network#ethernet", "network#disconnected", "custom/mail", "custom/weather", "pulseaudio", "clock", "custom/poweroff"],
+        "modules-center": ["wlr/taskbar"],
+        "modules-right": ["battery#bat1", "battery#bat2", "disk", "memory", "cpu", "temperature", "bluetooth", "backlight", "idle_inhibitor", "network#vpn", "network#wifi", "network#ethernet", "network#disconnected", "custom/mail", "custom/weather", "tray", "pulseaudio", "clock"],
         "sway/window": {
             "format": "  {}  ❌",
             "on-click": "swaymsg kill"
@@ -38,7 +38,7 @@
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
         },
         "cpu": {
-            "format": " {usage}%",
+            "format": "<i class='nf nf-fa-heart'></i> {usage}%",
             "tooltip": false
         },
         "disk": {
@@ -161,16 +161,7 @@
                 "default": ["🔈", "🔉", ""]
             },
             "on-click": "pavucontrol"
-        }
-    },
-    {
-        "name": "bottombar",
-        "layer": "top",
-        "position": "bottom",
-        "height": 28,
-        "modules-left": ["tray"],
-        "modules-center": ["wlr/taskbar"],
-        "modules-right": [],
+        },
         "wlr/taskbar": {
             "format": "{icon} {app_id}",
             "icon-size": 24,
@@ -179,8 +170,28 @@
             "on-click-right": "close"
         },
         "tray": {
-            "icon-size": 24,
+            "icon-size": 18,
             "spacing": 10
         }
-  }
+    }
+//    {
+//        "name": "bottombar",
+//        "layer": "top",
+//        "position": "bottom",
+//        "height": 28,
+//        "modules-left": ["tray"],
+//        "modules-center": ["wlr/taskbar"],
+//        "modules-right": [],
+//        "wlr/taskbar": {
+//            "format": "{icon} {app_id}",
+//            "icon-size": 24,
+//            "tooltip": false,
+//            "on-click": "activate",
+//            "on-click-right": "close"
+//        },
+//        "tray": {
+//            "icon-size": 24,
+//            "spacing": 10
+//        }
+//  }
 ]

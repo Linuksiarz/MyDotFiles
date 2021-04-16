@@ -1,16 +1,16 @@
 * {
     border: none;
-    border-radius: 0;
-    font-family: "Ubuntu Mono", "DejaVu Sans Condensed", "FontAwesome 5 Free Solid";
+    font-family: "FiraCode Nerd Font", "Ubuntu Mono", "DejaVu Sans Condensed", "FontAwesome 5 Free Solid";
     font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.9);
+    background-color: rgba(26, 26, 26, 0.9);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    /* filter: blur(4px); */
 }
 
 window#waybar.empty {
@@ -70,7 +70,7 @@ window#waybar.empty {
 #taskbar,
 #temperature,
 #tray {
-    padding: 0 6px;
+    padding: 0 4px;
     margin: 0 0px;
     color: #ffffff;
 }
