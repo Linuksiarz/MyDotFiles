@@ -6,6 +6,9 @@ default_border pixel 2
 # Notification daemon
 exec mako
 
+# Gammastep - protect the eyes
+exec gammastep -t 6500:2800 -l 54.35:18.65
+
 # Mount disks
 exec udiskie --no-automount --no-notify --tray
 
@@ -14,6 +17,15 @@ exec_always nm-applet --indicator
 
 # Allows gksu (https://github.com/swaywm/sway/issues/4492)
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# capture all screens to clipboard    
+bindsym Shift+Print exec grim - | wl-copy -t image/png
+    
+# capture the specified screen area to clipboard    
+bindsym Shift+Alt+Print exec grim -g "$(slurp)" - | wl-copy -t image/png
+
+# capture the specified screen area to clipboard    
+bindsym Print exec grim screenshot.png
 
 # Enable numlock
 input * xkb_numlock enable
