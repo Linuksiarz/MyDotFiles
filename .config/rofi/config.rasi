@@ -1,0 +1,6 @@
+configuration {
+ modi: "drun,ssh,combi,run";
+ theme: "/usr/share/rofi/themes/Arc-Dark.rasi";
+ font: "hack 10";
+ combi-modi: "drun,ssh";
+}
