@@ -16,7 +16,10 @@ exec udiskie --no-automount --no-notify --tray
 exec_always nm-applet --indicator
 
 # Allows gksu (https://github.com/swaywm/sway/issues/4492)
-exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Clipboard manager
+exec wl-paste -t text --watch clipman store
 
 # capture all screens to clipboard    
 bindsym Shift+Print exec grim - | wl-copy -t image/png
@@ -47,8 +50,8 @@ set $term kitty -o allow_remote_control=yes -o enabled_layouts=tall
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-#set $menu bemenu-run | xargs swaymsg exec --
-set $menu wofi -S drun | xargs something exec --
+# set $menu wofi -S drun | xargs something exec --
+set $menu rofi -show drun | xargs swaymsg exec --
 ### Output configuration
 exec ~/.azotebg
 

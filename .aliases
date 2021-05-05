@@ -3,7 +3,7 @@
 alias docker="sudo /usr/bin/docker"
 alias current_audio="cat /proc/asound/card*/pcm*p/sub*/hw_params"
 alias config='/usr/bin/git --git-dir=/home/linuksiarz/.cfg/ --work-tree=/home/linuksiarz'
-alias vv='nvim'
+alias v='nvim'
 
 # Direct config editing
 alias vv_sway='nvim ~/.config/sway/config'
