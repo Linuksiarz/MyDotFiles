@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 options=( "Headphones noise cancellation level", "Change wallpaper" )
 selection=$(printf '%s\n' "${options[@]}" | dmenu)

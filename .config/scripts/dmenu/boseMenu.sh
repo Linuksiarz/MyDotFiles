@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 options=( "High" "Low" "Off" )
 selection=$(printf '%s\n' "${options[@]}" | dmenu)
