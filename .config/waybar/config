@@ -11,7 +11,7 @@
             "format": "  {}  ❌",
             "on-click": "swaymsg kill"
         },
-	"sway/mode": {
+        "sway/mode": {
             "format": "<span style=\"italic\">{}</span>"
         },
         "bluetooth": {
@@ -19,8 +19,8 @@
   	    "format-alt": "bluetooth: {status}",
   	    "interval": 30,
   	    "format-icons": {
-  		"enabled": "",
-  		"disabled": ""
+  		      "enabled": "",
+  		      "disabled": ""
   	    },
   	    "tooltip-format": "{status}"
         },
@@ -50,7 +50,7 @@
             "tooltip-format": "{used:0.1f}G / {total:0.1f}G used"
         },
         "temperature": {
-	    "thermal-zone": 1,
+	          "thermal-zone": 1,
             "critical-threshold": 80,
             "format": "{icon} {temperatureC}°C",
             "format-icons": ["", "", "", "", ""]
@@ -120,7 +120,7 @@
             "interval": 120,
             "on-click": "thunderbird && swaymsg '[app_id=thunderbird] focus'"
         },
-	"pulseaudio": {
+	      "pulseaudio": {
             "scroll-step": 1,
             "format": "{icon} {volume}%{format_source}",
             "format-bluetooth": "{icon} {volume}%{format_source}",
@@ -148,25 +148,6 @@
             "icon-size": 18,
             "spacing": 10
         }
-    }
-//    {
-//        "name": "bottombar",
-//        "layer": "top",
-//        "position": "bottom",
-//        "height": 28,
-//        "modules-left": ["tray"],
-//        "modules-center": ["wlr/taskbar"],
-//        "modules-right": [],
-//        "wlr/taskbar": {
-//            "format": "{icon} {app_id}",
-//            "icon-size": 24,
-//            "tooltip": false,
-//            "on-click": "activate",
-//            "on-click-right": "close"
-//        },
-//        "tray": {
-//            "icon-size": 24,
-//            "spacing": 10
-//        }
-//  }
+    
+  }
 ]
