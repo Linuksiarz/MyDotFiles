@@ -10,7 +10,10 @@ eval "$(jump shell)"
 [ -n "${SWAYSOCK}" ] && export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Enable wayland in firefox under sway
-[ -n "${SWAYSOCK}" ] && MOZ_ENABLE_WAYLAND=0
+[ -n "${SWAYSOCK}" ] && MOZ_ENABLE_WAYLAND=1
 
 # https://bbs.archlinux.org/viewtopic.php?id=217281
 export $(dbus-launch)
+
+# Additional paths
+export PATH=$PATH:/opt/bin:$HOME/.local/bin
